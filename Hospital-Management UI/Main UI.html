@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f7fa;
+        }
+
+        header {
+            background-color: #0077b6;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #023e8a;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-weight: bold;
+        }
+
+        .container {
+            display: flex;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .sidebar {
+            width: 25%;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .main-content {
+            width: 75%;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .card {
+            background-color: #e9f5ff;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+        }
+
+        form input,
+        form select,
+        form button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        button {
+            background-color: #0077b6;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #023e8a;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #0077b6;
+            color: white;
+            margin-top: 20px;
+        }
+        a {
+            color: blue;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Hospital Management System</h1>
+        <p>Patient and Staff Management Dashboard</p>
+    </header>
+
+    <nav>
+        <a href="#">Dashboard</a>
+        <a href="#">Patients</a>
+        <a href="#">Doctors</a>
+        <a href="#">Appointments</a>
+        <a href="#">Billing</a>
+    </nav>
+
+    <div class="container">
+
+        <div class="sidebar">
+            <h2>Quick Menu</h2>
+
+            <div class="card">
+                <h3>Total Patients</h3>
+                <p>250</p>
+            </div>
+
+            <div class="card">
+                <h3>Available Doctors</h3>
+                <p>18</p>
+            </div>
+
+            <div class="card">
+                <h3>Appointments Today</h3>
+                <p>45</p>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <h2>Register New Patient</h2>
+
+            <form>
+                <label>Patient Name</label>
+                <input type="text" placeholder="Enter patient name">
+
+                <label>Age</label>
+                <input type="number" placeholder="Enter age">
+
+                <label>Gender</label>
+                <select>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                </select>
+
+                <label>Department</label>
+                <select>
+                    <option>Cardiology</option>
+                    <option>Neurology</option>
+                    <option>Pediatrics</option>
+                    <option>Orthopedics</option>
+                </select>
+                <h1>Appointment</h1>
+                <a href="Appointment.html">Book Appointment</a>
+                
+
+                <button type="submit">Register Patient</button>
+            </form>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>©️ 2026 Hospital Management System</p>
+    </footer>
+
+</body>
+
+</html>

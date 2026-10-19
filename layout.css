@@ -1,0 +1,80 @@
+/* LAYOUT — Terminal Console
+   Structure only: display, grid/flex, sizes, spacing, positioning, responsive breakpoints.
+   Pairs with theme.css. */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 18px 24px;
+}
+
+nav {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  padding: 10px 14px;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+}
+
+.win {
+  padding: 28px 32px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin: .15em 0;
+}
+
+h2 {
+  margin: 0 0 18px;
+}
+
+.chip {
+  display: inline-block;
+  padding: 2px 10px;
+  margin: 0 8px 8px 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 24px;
+  margin: 8px 12px 0 0;
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+}
+
+.grid .win {
+  margin: 0;
+}
+
+input,textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 6px 0 16px;
+}

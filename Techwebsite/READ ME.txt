@@ -1,0 +1,19 @@
+THE INSTITUTE OF FINANCE MANAGEMENT
+
+THE FACULTY OF COMPUTING AND MATHEMATICS
+BACHELOR OF SCIENCE IN INFORMATION TECHNOLOGY
+ACADEMIC YEAR 2025/2026
+SUBJECT NAME: WEB TECHNOLOGY AND APPLICATION
+SUBJECT CODE: ITU07212                          
+  GROUP ASSIGNMENT
+STREAM B:  GROUP 1
+GROUP 7
+MEMBERS
+STUDENT NAMESREGISTRATION NUMBERSIGNATUREFEBRONIA HELADIUS DAUDIMC/BIT/2510049F.H.daudBRIGHT ROGERS KHASUSAIMC/BIT/2520910B.R.KhasusaSHABANI MOHAMEDI YAHAYAIMC/BIT/2521782S.M.YahayaSUZANA REVOCATUS LAURENTIMC/BIT/2514312S.R.Laurent
+
+
+
+
+DESCRIPTION:
+The project is about a multipage website for a Tech company known as TechVision Solutions that provides solutions for businesses in need of web development, software development and digital marketing.
+The project is the the front end of the explained website, shows the use of both HTML and CSS skills as instructed in the question document given.

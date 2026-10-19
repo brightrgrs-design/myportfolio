@@ -1,0 +1,131 @@
+/* THEME — Terminal Console
+   Palette: bg #060a08 · panel #0e1411 · border #24342b · text #c9d6cf · muted #7f8f88 · accent green #4ade80
+   Fonts: JetBrains Mono (everything)
+   Look only: colors, fonts, borders, shadows, hover effects and animations.
+   Swap this file to restyle the site without touching the layout. */
+
+body {
+  color: #c9d6cf;
+  font: 16px/1.7 'JetBrains Mono',monospace;
+  background: radial-gradient(#4ade8026 1px,transparent 1px) 0 0/24px 24px,radial-gradient(ellipse at 50% 0,#10301d,#060a08 70%) fixed;
+}
+
+header {
+  border-bottom: 1px solid #24342b;
+}
+
+.logo {
+  color: #4ade80;
+  font-weight: 800;
+  text-decoration: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav a {
+  color: #7f8f88;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: .2s;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+nav a[aria-current=page] {
+  background: #4ade80;
+  color: #04110a;
+}
+
+.win {
+  background: #0e1411;
+  border: 1px solid #24342b;
+  border-radius: 12px;
+  transition: border-color .25s,transform .25s;
+}
+
+.grid .win:hover {
+  border-color: #4ade80;
+  transform: translateY(-3px);
+}
+
+h1 {
+  font-size: clamp(34px,6vw,64px);
+  line-height: 1.1;
+  color: #fff;
+  font-weight: 800;
+}
+
+h2 {
+  color: #fff;
+  font-size: 22px;
+}
+
+.g {
+  color: #4ade80;
+}
+
+.m {
+  color: #7f8f88;
+}
+
+.chip {
+  border: 1px solid #2f4a3a;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.btn {
+  font: 600 14px 'JetBrains Mono',monospace;
+  border-radius: 8px;
+  border: 1px solid #4ade80;
+  background: 0;
+  color: #4ade80;
+  text-decoration: none;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.btn:hover {
+  background: #4ade8022;
+}
+
+.btn.p {
+  background: #4ade80;
+  color: #04110a;
+}
+
+.btn.p:hover {
+  background: #86efac;
+}
+
+label {
+  color: #7f8f88;
+  font-size: 13px;
+}
+
+input,textarea {
+  background: #0a100d;
+  border: 1px solid #2f4a3a;
+  border-radius: 8px;
+  color: #c9d6cf;
+  font: inherit;
+}
+
+a:focus-visible,input:focus-visible,textarea:focus-visible,button:focus-visible {
+  outline: 2px solid #4ade80;
+  outline-offset: 3px;
+}
+
+.page > * { animation: in .55s both; }
+.page > :nth-child(2) { animation-delay: .07s; }
+.page > :nth-child(3) { animation-delay: .14s; }
+.page > :nth-child(4) { animation-delay: .21s; }
+/* page leave transition (triggered by main.js) */
+.leaving .page { animation: out .25s both; }
+@keyframes in { from { opacity: 0; transform: translateY(16px); } }
+@keyframes out { to { opacity: 0; transform: translateY(-8px); } }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
