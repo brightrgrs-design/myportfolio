@@ -28,10 +28,10 @@
  a:hover {
                 color: red;
 }
-header nav ul li a :active{
+header nav ul li a:active{
                 color: red;
             }
-             header nav ul li a :visited{
+             header nav ul li a:visited{
                 color: blue;
              }
 /*Hero*/
@@ -43,7 +43,7 @@ header nav ul li a :active{
                 margin-right: 20px;
                 background-color: lightgray;
                 margin-top: 20px;
-                margin-bottom: 20;
+                margin-bottom: 20px;
             }
             .hero h2 {
                 font-size: 2em;
@@ -56,7 +56,7 @@ header nav ul li a :active{
             .cta-button {
                 padding: 10px;
                 background-color: blue;
-                color: black;
+                color: white;
                 text-decoration: none;
                 border-radius: 5px;
             }
@@ -65,13 +65,13 @@ header nav ul li a :active{
             }
             .secondary-button {
                 padding: 10px 20px;
-                background-color: gray;
+                background-color: dimgray;
                 color: white;
                 text-decoration: none;
                 border-radius: 5px;
             }
             .secondary-button:hover {
-                background-color: darkgray;
+                background-color: #333;
             }
             /*about*/
             .about {
@@ -95,7 +95,7 @@ header nav ul li a :active{
                 padding: 50px 20px;
                 margin-right: 20px;
                 background-color: lightgray;
-                margin-bottom: 20;
+                margin-bottom: 20px;
             }
             .Services h2 {
                 font-size: 2em;
@@ -131,15 +131,15 @@ header nav ul li a :active{
                 margin-right: 20px;
                 background-color: lightgray;
                 margin-top: 20px;
-                margin-bottom: 20;
+                margin-bottom: 20px;
             }
             .portfolio h2 {
                 font-size: 2em;
                 margin-bottom: 20px;
             }
-            .portfolio-container {
+            .Portfolio-Container {
                 display: grid;
-                grid-template-columns: repeat(3, 1fr);
+                grid-template-columns: repeat(3, minmax(0, 1fr));
                 gap: 20px;
             }
             .Portfolio-Card {
@@ -167,7 +167,7 @@ header nav ul li a :active{
                 margin-right: 20px;
                 background-color: lightgray;
                 margin-top: 20px;
-                margin-bottom: 20;
+                margin-bottom: 20px;
             }
             .testimonials h2 {
                 font-size: 2em;
@@ -199,7 +199,7 @@ header nav ul li a :active{
                 margin-right: 20px;
                 background-color: lightgray;
                 margin-top: 20px;
-                margin-bottom: 20;
+                margin-bottom: 20px;
             }
             .Pricing h2 {
                 font-size: 2em;
@@ -296,7 +296,6 @@ header nav ul li a :active{
             }
             .mission{
                 width: 50%;
-                flex: right;
                 background-color: lightgray;
                 margin-left: 20px;
                 padding: 20px;
@@ -313,7 +312,7 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: transparent;
-    background-image: url(../Images/191966002861835066.jpg);
+    background-image: url(Images/191966002861835066.jpg);
     color:orange;
     border: black;
     border-radius: 10px;
@@ -333,7 +332,7 @@ nav ul li a {
     font-size: 18px;
     font-weight: bold;
 }
- nav ul li a :hover {
+ nav ul li a:hover {
     color:red;
 
  }
@@ -372,7 +371,7 @@ img{
 .maincontent{
     width:75%;
     padding:30px;
-    border-radius:none;
+    border-radius:0;
     margin-top: 20px;
 }
 
@@ -409,14 +408,6 @@ main div img{
 .blog-info span{
 
     margin-right:20px;
-
-}
-.Background{
-     max-width: 100%;
-    align-items: center;
-    background-image: url(Website/Developers/Oklahoma/City.jpg);
-    filter: blur(8px);
-    z-index: -1;
 
 }
 /*Side bar*/
@@ -589,21 +580,22 @@ button :hover{
     flex-wrap:wrap
 }
 /* newsletter*/
-.newletter p{
+.newsletter p{
     margin-bottom:20px;
 }
 .newsletter input {
     flex:1;
     min-width:250px;
     padding:15px;
-    border:1px solid#bbb;
+    border:1px solid #bbb;
     border-radius:6px;
     font-size:16px;
     outline:none;
     transition: 0.3s;
 }
-.newsletter input :focus{
-border-color:0066cc;
+.newsletter input:focus{
+border-color:#0066cc;
+box-shadow:0 0 0 3px rgba(0,102,204,.25);
 
 }
 /* button */
@@ -626,7 +618,7 @@ footer {
   padding: 20px;
   text-align: center;
   color: orange;
-  background-image: url(../Images/191966002861835066.jpg);
+  background-image: url(Images/191966002861835066.jpg);
 
  }
 footer p {
@@ -640,33 +632,83 @@ footer div a{
     color: orange;
     text-decoration: none;
 }
-span{
-    text-align: center;
+
+/* "Read more" link styled like a button (a link inside a <button> is invalid HTML) */
+.read-more{
+    display: inline-block;
+    padding: 8px 18px;
+    border: 1px solid #767676;
+    border-radius: 4px;
+    background: #efefef;
+    color: #000;
+    text-decoration: none;
+}
+.read-more:hover{
+    color: red;
+    background-color: #333;
 }
 
+/* =========================================================
+   MOBILE FIXES
+   Only applies on screens 768px wide or narrower, so the
+   desktop layout stays exactly as it was.
+   ========================================================= */
+@media (max-width: 768px) {
 
-/* Responsive */
+    /* no sideways scrolling; cancel the global margin:auto from the reset */
+    html { -webkit-text-size-adjust: 100%; }
+    html, body { overflow-x: hidden; }
+    * { margin: 0; }
+    body, .body1 { margin-left: 0; padding: 0 12px; }
 
-@media(max-width:768px){
+    /* images: keep their proportions and drop the big side margins */
+    img { max-width: 100%; height: auto; margin-right: 0; }
+    .social-media img { width: 30px; height: 30px; margin: 0 6px; }
+    main div img { width: 100%; max-width: 450px; height: auto; aspect-ratio: 1 / 1; margin-right: 0; }
+    .banner-img { height: auto; }
+    .article-card img { width: 100%; max-width: 400px; }
 
-.container{
+    /* header and navigation: stack and let the links wrap */
+    header { flex-direction: column; gap: 10px; padding: 15px 12px; text-align: center; }
+    header h1 { font-size: 1.4rem; }
+    nav ul { flex-wrap: wrap; justify-content: center; gap: 8px 16px; }
+    nav ul li { margin-left: 0; }
+    nav ul li a { font-size: 16px; display: inline-block; padding: 8px 4px; }
 
-    width:95%;
-    padding:20px;
+    /* side-by-side blocks become one column */
+    .hero, .container, .container3, .div { flex-direction: column; }
+    .hero { padding: 30px 16px; margin-right: 0; text-align: center; }
+    .hero > div { width: 100%; }
+    .about, .mission { width: 100%; margin: 12px 0; }
+    .Services, .portfolio, .testimonials, .Pricing, .contact { margin-right: 0; padding: 30px 16px; }
+    .div { padding: 20px 10px; margin-right: 0; text-align: center; }
+    .container { width: 100%; padding: 0; }
 
-}
+    /* grids and card rows: one card per row */
+    .Service-Container, .Portfolio-Container, .container2 { grid-template-columns: 1fr; }
+    .Service-Card, .Portfolio-Card { margin: 12px 0; }
+    .Testimonial-Card, .Pricing-Card, .Contact-form, .contact-info { flex: 1 1 100%; }
+    .contact-info { margin-left: 0; }
 
-.blog-banner h1{
+    /* buttons and form fields: comfortable to tap, no iOS zoom on focus */
+    .cta-button, .secondary-button { display: inline-block; margin: 6px 6px 6px 0; padding: 12px 18px; }
+    .read-more { padding: 12px 20px; }
+    input, textarea { font-size: 16px; }
+    .Contact-form button { width: 100%; padding: 14px; }
+    .newsletter input, .newsletter button { width: 100%; min-width: 0; }
 
-    font-size:28px;
-
-}
-
-.banner-img{
-
-    height:250px;
-
-}
-
-
+    /* blog page */
+    .maincontent, .sidebar { width: 100%; }
+    .maincontent { padding: 16px 0; }
+    .sidebar { margin: 20px 0 0; padding: 16px; }
+    .blog-banner h1 { font-size: 26px; }
+    .blog-info span { display: inline-block; margin-right: 12px; font-size: 16px; }
+    h2 { font-size: 24px; }
+    h3 { font-size: 20px; }
+    p { text-align: left; }
+    ul, ol { margin-left: 20px; }
+    blockquote { font-size: 17px; padding: 14px; }
+    .article-card { padding: 16px; }
+    .related-article { margin: 20px auto; padding: 16px; }
+    footer p { margin-left: 0; font-size: 1em; }
 }
